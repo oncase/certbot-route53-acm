@@ -11,6 +11,7 @@ The following environment variables should be provided:
 * AWS_ACCESS_KEY_ID - your AWS Key - used to deploy DNS Challenges on Route 53 as well as to send certificates to Cert Manager;
 * AWS_SECRET_ACCESS_KEY - Your AWS access key;
 * CERT_ARN - When updating an existing certificate, you must provide the arn for the existing resource on AWS Certificate Manager.
+* AWS_CONTAINER_CREDENTIALS_RELATIVE_URI can be passed to the container to avoid having to use key/secret - it works for AWS Environments ECS/CodeBuild.
 
 # Use cases
 

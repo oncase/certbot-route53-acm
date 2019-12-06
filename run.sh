@@ -2,12 +2,13 @@
 
 envvars_exception(){
   echo "-------------------------------------------------------------------------------"
-  echo "# You must specify the following environment vars"
+  echo "# The following environment vars are read"
   echo "  - DOMAIN_NAME - my.domain.com"
   echo "  - CONTACT_EMAIL - john@doe.com"
   echo "  - AWS_DEFAULT_REGION - us-east-1"
   echo "  - AWS_ACCESS_KEY_ID - F9Y6KUHL86BTTTEL"
   echo "  - AWS_SECRET_ACCESS_KEY - YVSECDHAJVHBV437DZ65GTG59NF923G9"
+  echo "  - AWS_CONTAINER_CREDENTIALS_RELATIVE_URI - to use the utility without key/secret"
   echo "  - CERT_ARN (optional) - Only if you're renewing and want to update it on AWS"
   echo "  - DRYRUN=true (optional) - Runs certbot only with the --dry-run for testing"
   echo "-------------------------------------------------------------------------------\n"
@@ -18,8 +19,6 @@ mandatory_vars=(
   "DOMAIN_NAME"
   "CONTACT_EMAIL"
   "AWS_DEFAULT_REGION"
-  "AWS_ACCESS_KEY_ID"
-  "AWS_SECRET_ACCESS_KEY"
 )
 
 check_vars(){
